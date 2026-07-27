@@ -16,6 +16,9 @@ console.log(`${tradeCount} trades`)
 
 ## Install
 
+> **Not on npm yet.** The install command below is what you'll use once it is published.
+> Until then, clone this repo and build it — see [Run from source](#run-from-source).
+
 ```bash
 npm install veltra-sdk
 ```
@@ -121,3 +124,23 @@ new Veltra({
 ## License
 
 MIT
+
+## Run from source
+
+Until the package is published, clone and build, then reference it locally:
+
+```bash
+git clone https://github.com/QuirkyTurtle11/veltra-sdk
+cd veltra-sdk
+npm install
+npm run build
+npm link          # then `npm link veltra-sdk` in your project
+```
+
+## Development
+
+```bash
+npm run typecheck
+npm test
+npm run build
+```
