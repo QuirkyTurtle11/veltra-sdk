@@ -92,15 +92,6 @@ test('a non-ok response throws a typed VeltraError', async () => {
   })
 })
 
-test('estimate posts addresses and unwraps the response', async () => {
-  const resp = { addresses: [{ address: 'W', estimateType: 'exact', estimatedTradeCount: 42, estimatedSeconds: 3 }] }
-  const { fn, calls } = stubFetch(new Response(JSON.stringify(resp), { status: 200 }))
-  const client = new Veltra({ apiKey: 'k', fetch: fn })
-  const out = await client.estimate(['W'])
-  assert.equal(out[0].estimatedTradeCount, 42)
-  assert.match(calls[0], /\/v1\/billing\/estimate$/)
-})
-
 test('chain is passed through as a query param', async () => {
   const { fn, calls } = stubFetch(new Response(JSON.stringify({ wallet: 'W', complete: true, tradeCount: 0, pageSize: 1, totalPages: 0, trades: [] }), { status: 200 }))
   const client = new Veltra({ apiKey: 'k', fetch: fn })

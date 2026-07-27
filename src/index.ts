@@ -9,7 +9,6 @@ export type {
   HistorySummary,
   CollectedHistory,
   HistoryPage,
-  WalletEstimate,
   VeltraOptions,
   HistoryOptions,
   PageOptions,

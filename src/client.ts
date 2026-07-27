@@ -13,7 +13,6 @@ import type {
   HistorySummary,
   CollectedHistory,
   HistoryPage,
-  WalletEstimate,
   VeltraOptions,
   HistoryOptions,
   PageOptions,
@@ -96,20 +95,6 @@ export class Veltra {
     return (await res.json()) as HistoryPage
   }
 
-  /**
-   * Cheaply probe how many trades one or more wallets have — and get a few sample trades —
-   * before committing to a full fetch. No API key required (IP-rate-limited).
-   */
-  async estimate(addresses: string[], chain?: string): Promise<WalletEstimate[]> {
-    const res = await this.fetchImpl(`${this.baseUrl}/v1/billing/estimate`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ addresses, ...(chain ? { chain } : {}) }),
-    })
-    if (!res.ok) throw await this.toError(res)
-    const json = (await res.json()) as { addresses: WalletEstimate[] }
-    return json.addresses
-  }
 
   private historyUrl(options: HistoryOptions, limit?: number): URL {
     const url = new URL(`${this.baseUrl}/v1/wallets/${options.address}/history`)

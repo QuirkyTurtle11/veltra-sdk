@@ -58,13 +58,6 @@ do {
 } while (cursor)
 ```
 
-### Estimate before fetching (no API key needed)
-
-```ts
-const [estimate] = await client.estimate([address])
-console.log(estimate.estimatedTradeCount, estimate.estimateType)
-```
-
 ### Multichain
 
 Pass `chain` to any history call — Solana (default), every major EVM chain, and Tron:

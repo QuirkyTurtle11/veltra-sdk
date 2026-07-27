@@ -48,15 +48,6 @@ export interface HistoryPage {
   cursor?: string
 }
 
-/** A wallet-size estimate from `estimate()`. */
-export interface WalletEstimate {
-  address: string
-  estimateType: 'exact' | 'approximate'
-  estimatedTradeCount: number
-  estimatedSeconds: number
-  sampleTrades?: Trade[]
-}
-
 export interface VeltraOptions {
   /** Your Veltra API key. Get one at https://veltrabot.com. */
   apiKey: string
