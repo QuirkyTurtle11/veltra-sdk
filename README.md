@@ -26,6 +26,13 @@ npm install veltra-sdk
 Requires Node.js 18+ (uses the built-in `fetch`). Get an API key at
 [veltrabot.com](https://veltrabot.com).
 
+This package is ESM-only. Use `import` as shown above. From a CommonJS project, reach it with a
+dynamic import instead:
+
+```js
+const { Veltra } = await import('veltra-sdk')
+```
+
 ## Usage
 
 ### Get a wallet's full history
