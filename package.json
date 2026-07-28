@@ -1,6 +1,6 @@
 {
   "name": "veltra-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official TypeScript client for the Veltra wallet trade-history API: typed, streaming, multichain, zero dependencies.",
   "type": "module",
   "engines": {
