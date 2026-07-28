@@ -36,6 +36,15 @@
     "api-client",
     "sdk"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuirkyTurtle11/veltra-sdk.git"
+  },
+  "homepage": "https://veltrabot.com/docs",
+  "bugs": {
+    "url": "https://github.com/QuirkyTurtle11/veltra-sdk/issues"
+  },
+  "author": "Veltra",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20",

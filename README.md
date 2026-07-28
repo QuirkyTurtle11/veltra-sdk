@@ -1,8 +1,11 @@
 # veltra-sdk
 
+[![npm version](https://img.shields.io/npm/v/veltra-sdk.svg)](https://www.npmjs.com/package/veltra-sdk)
+[![license](https://img.shields.io/npm/l/veltra-sdk.svg)](./LICENSE)
+
 The official TypeScript client for the [Veltra](https://veltrabot.com) wallet trade-history
-API. Give it a wallet, get that wallet's complete buy/sell history — typed, streaming, and
-multichain — without hand-rolling HTTP, NDJSON parsing, pagination, or error handling. Zero
+API. Give it a wallet, get that wallet's complete buy/sell history: typed, streaming, and
+multichain, without hand-rolling HTTP, NDJSON parsing, pagination, or error handling. Zero
 runtime dependencies.
 
 ```ts
@@ -15,9 +18,6 @@ console.log(`${tradeCount} trades`)
 ```
 
 ## Install
-
-> **Not on npm yet.** The install command below is what you'll use once it is published.
-> Until then, clone this repo and build it — see [Run from source](#run-from-source).
 
 ```bash
 npm install veltra-sdk
@@ -114,26 +114,28 @@ new Veltra({
 })
 ```
 
-## License
+## More
 
-MIT
+- [API documentation](https://veltrabot.com/docs)
+- [Pricing](https://veltrabot.com/docs/pricing) (100,000 trades free, no card)
+- [veltra-cli](https://github.com/QuirkyTurtle11/veltra-cli) for the same API from a terminal
+- [veltra-mcp](https://github.com/QuirkyTurtle11/veltra-mcp) to give an AI assistant the same access
+- [veltra-examples](https://github.com/QuirkyTurtle11/veltra-examples) for runnable projects built on this SDK
 
-## Run from source
-
-Until the package is published, clone and build, then reference it locally:
+## Contributing
 
 ```bash
 git clone https://github.com/QuirkyTurtle11/veltra-sdk
 cd veltra-sdk
 npm install
-npm run build
-npm link          # then `npm link veltra-sdk` in your project
-```
-
-## Development
-
-```bash
 npm run typecheck
 npm test
 npm run build
 ```
+
+To try local changes against a real project without publishing, `npm link` here and then
+`npm link veltra-sdk` in the consuming project.
+
+## License
+
+MIT
