@@ -8,7 +8,7 @@ import { Veltra } from '../src/index.js'
 
 const apiKey = process.env.VELTRA_API_KEY
 if (!apiKey) {
-  console.error('Set VELTRA_API_KEY (get one at https://veltrabot.com).')
+  console.error('Set VELTRA_API_KEY (get one at https://veltradata.io).')
   process.exit(1)
 }
 const address = process.argv[2] ?? process.env.WALLET

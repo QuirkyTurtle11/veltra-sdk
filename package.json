@@ -1,6 +1,6 @@
 {
   "name": "veltra-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Official TypeScript client for the Veltra wallet trade-history API: typed, streaming, multichain, zero dependencies.",
   "type": "module",
   "engines": {
@@ -40,7 +40,7 @@
     "type": "git",
     "url": "git+https://github.com/QuirkyTurtle11/veltra-sdk.git"
   },
-  "homepage": "https://veltrabot.com/docs",
+  "homepage": "https://veltradata.io/docs",
   "bugs": {
     "url": "https://github.com/QuirkyTurtle11/veltra-sdk/issues"
   },

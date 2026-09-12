@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/veltra-sdk.svg)](https://www.npmjs.com/package/veltra-sdk)
 [![license](https://img.shields.io/npm/l/veltra-sdk.svg)](./LICENSE)
 
-The official TypeScript client for the [Veltra](https://veltrabot.com) wallet trade-history
+The official TypeScript client for the [Veltra](https://veltradata.io) wallet trade-history
 API. Give it a wallet, get that wallet's complete buy/sell history: typed, streaming, and
 multichain, without hand-rolling HTTP, NDJSON parsing, pagination, or error handling. Zero
 runtime dependencies.
@@ -24,7 +24,7 @@ npm install veltra-sdk
 ```
 
 Requires Node.js 18+ (uses the built-in `fetch`). Get an API key at
-[veltrabot.com](https://veltrabot.com).
+[veltradata.io](https://veltradata.io).
 
 This package is ESM-only. Use `import` as shown above. From a CommonJS project, reach it with a
 dynamic import instead:
@@ -116,15 +116,15 @@ try {
 ```ts
 new Veltra({
   apiKey: '...',
-  baseUrl: 'https://veltrabot.com', // override if needed
+  baseUrl: 'https://veltradata.io', // override if needed
   fetch: customFetch, // inject a proxy or a mock (defaults to global fetch)
 })
 ```
 
 ## More
 
-- [API documentation](https://veltrabot.com/docs)
-- [Pricing](https://veltrabot.com/docs/pricing) (100,000 trades free, no card)
+- [API documentation](https://veltradata.io/docs)
+- [Pricing](https://veltradata.io/docs/pricing) (100,000 trades free, no card)
 - [veltra-cli](https://github.com/QuirkyTurtle11/veltra-cli) for the same API from a terminal
 - [veltra-mcp](https://github.com/QuirkyTurtle11/veltra-mcp) to give an AI assistant the same access
 - [veltra-examples](https://github.com/QuirkyTurtle11/veltra-examples) for runnable projects built on this SDK

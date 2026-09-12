@@ -49,9 +49,9 @@ export interface HistoryPage {
 }
 
 export interface VeltraOptions {
-  /** Your Veltra API key. Get one at https://veltrabot.com. */
+  /** Your Veltra API key. Get one at https://veltradata.io. */
   apiKey: string
-  /** Override the API base URL. Defaults to https://veltrabot.com. */
+  /** Override the API base URL. Defaults to https://veltradata.io. */
   baseUrl?: string
   /** Inject a custom fetch (e.g. a proxy or a mock in tests). Defaults to the global fetch. */
   fetch?: typeof fetch

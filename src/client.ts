@@ -18,7 +18,7 @@ import type {
   PageOptions,
 } from './types.js'
 
-const DEFAULT_BASE_URL = 'https://veltrabot.com'
+const DEFAULT_BASE_URL = 'https://veltradata.io'
 
 export class Veltra {
   private readonly apiKey: string
@@ -27,7 +27,7 @@ export class Veltra {
 
   constructor(options: VeltraOptions) {
     if (!options.apiKey) {
-      throw new Error('Veltra: apiKey is required. Get one at https://veltrabot.com')
+      throw new Error('Veltra: apiKey is required. Get one at https://veltradata.io')
     }
     this.apiKey = options.apiKey
     this.baseUrl = (options.baseUrl ?? DEFAULT_BASE_URL).replace(/\/$/, '')
